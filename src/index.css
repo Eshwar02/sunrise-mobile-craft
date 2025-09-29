@@ -8,26 +8,30 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Papyrus Design System - Calming color palette */
+    --background: 48 40% 97%;  /* Warm cream background */
+    --foreground: 90 15% 15%;  /* Dark sage text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 48 40% 98%;
+    --card-foreground: 90 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 48 40% 98%;
+    --popover-foreground: 90 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Sage Green */
+    --primary: 90 25% 50%;  /* Sage Green (#87A96B) */
+    --primary-foreground: 48 40% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Cream */
+    --secondary: 48 30% 92%;  
+    --secondary-foreground: 90 15% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 48 20% 90%;
+    --muted-foreground: 90 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Soft Gold */
+    --accent: 45 85% 55%;  /* Soft Gold (#D4AF37) */
+    --accent-foreground: 90 15% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -56,26 +60,27 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode - maintaining Papyrus serene aesthetic */
+    --background: 90 15% 8%;  /* Deep sage background */
+    --foreground: 48 30% 92%;  /* Warm cream text */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 90 15% 10%;
+    --card-foreground: 48 30% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 90 15% 10%;
+    --popover-foreground: 48 30% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 90 30% 60%;  /* Lighter sage for dark mode */
+    --primary-foreground: 90 15% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 90 10% 15%;
+    --secondary-foreground: 48 30% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 90 8% 18%;
+    --muted-foreground: 48 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 75% 65%;  /* Lighter gold for dark mode */
+    --accent-foreground: 90 15% 8%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
