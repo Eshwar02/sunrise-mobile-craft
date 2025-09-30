@@ -86,7 +86,7 @@ const Profile = () => {
         setLanguagePreference(profileData.language_preference || "en");
         
         // Parse reading preferences
-        const prefs = profileData.reading_preferences || {};
+        const prefs = (profileData.reading_preferences as Record<string, any>) || {};
         setDarkMode(prefs.dark_mode || false);
         setNotifications(prefs.notifications !== false);
       }
