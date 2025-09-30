@@ -12,6 +12,11 @@ import { useToast } from "@/hooks/use-toast";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowLeft, User, Globe, Palette, Bell, Lock, Camera } from "lucide-react";
 
+interface ReadingPreferences {
+  dark_mode?: boolean;
+  notifications?: boolean;
+}
+
 const Profile = () => {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
@@ -86,7 +91,7 @@ const Profile = () => {
         setLanguagePreference(profileData.language_preference || "en");
         
         // Parse reading preferences
-        const prefs = (profileData.reading_preferences as Record<string, any>) || {};
+        const prefs = (profileData.reading_preferences as ReadingPreferences) || {};
         setDarkMode(prefs.dark_mode || false);
         setNotifications(prefs.notifications !== false);
       }
