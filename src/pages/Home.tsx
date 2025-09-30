@@ -267,7 +267,7 @@ const Home = () => {
 
         {/* Quick Actions */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <Card className="bg-card/80 backdrop-blur-sm hover:shadow-lg transition-all hover:scale-105 cursor-pointer group">
+          <Card className="bg-card/80 backdrop-blur-sm hover:shadow-lg transition-all hover:scale-105 cursor-pointer group" onClick={() => navigate('/library')}>
             <CardContent className="p-6 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-3 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                 <Library className="h-6 w-6" />
@@ -277,7 +277,7 @@ const Home = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-card/80 backdrop-blur-sm hover:shadow-lg transition-all hover:scale-105 cursor-pointer group">
+          <Card className="bg-card/80 backdrop-blur-sm hover:shadow-lg transition-all hover:scale-105 cursor-pointer group" onClick={() => navigate('/library')}>
             <CardContent className="p-6 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-3 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
                 <Search className="h-6 w-6" />

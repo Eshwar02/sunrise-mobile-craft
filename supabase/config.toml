@@ -1,1 +1,15 @@
 project_id = "apgrmjkfdlwhejvzgfae"
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["https://apgrmjkfdlwhejvzgfae.supabase.co"]
+
+[functions.generate-book-summary]
+verify_jwt = false
+
+[functions.search-google-books]
+verify_jwt = false
+
+[functions.add-book-from-google]
+verify_jwt = false
