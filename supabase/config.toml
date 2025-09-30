@@ -13,3 +13,6 @@ verify_jwt = false
 
 [functions.add-book-from-google]
 verify_jwt = false
+
+[functions.manage-offline-reading]
+verify_jwt = false
