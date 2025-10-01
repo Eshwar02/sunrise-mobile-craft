@@ -100,6 +100,39 @@ export type Database = {
         }
         Relationships: []
       }
+      offline_content: {
+        Row: {
+          book_id: string
+          content_data: Json | null
+          created_at: string
+          downloaded_at: string
+          expires_at: string | null
+          id: string
+          last_accessed_at: string
+          user_id: string
+        }
+        Insert: {
+          book_id: string
+          content_data?: Json | null
+          created_at?: string
+          downloaded_at?: string
+          expires_at?: string | null
+          id?: string
+          last_accessed_at?: string
+          user_id: string
+        }
+        Update: {
+          book_id?: string
+          content_data?: Json | null
+          created_at?: string
+          downloaded_at?: string
+          expires_at?: string | null
+          id?: string
+          last_accessed_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -129,6 +162,39 @@ export type Database = {
           language_preference?: string | null
           reading_preferences?: Json | null
           updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      reading_sessions: {
+        Row: {
+          book_id: string
+          created_at: string
+          ended_at: string | null
+          id: string
+          minutes_spent: number | null
+          pages_read: number | null
+          started_at: string
+          user_id: string
+        }
+        Insert: {
+          book_id: string
+          created_at?: string
+          ended_at?: string | null
+          id?: string
+          minutes_spent?: number | null
+          pages_read?: number | null
+          started_at?: string
+          user_id: string
+        }
+        Update: {
+          book_id?: string
+          created_at?: string
+          ended_at?: string | null
+          id?: string
+          minutes_spent?: number | null
+          pages_read?: number | null
+          started_at?: string
           user_id?: string
         }
         Relationships: []
@@ -169,7 +235,9 @@ export type Database = {
           book_id: string
           completed_at: string | null
           current_page: number | null
+          downloaded_at: string | null
           id: string
+          last_read_at: string | null
           progress: number | null
           started_at: string | null
           status: string | null
@@ -180,7 +248,9 @@ export type Database = {
           book_id: string
           completed_at?: string | null
           current_page?: number | null
+          downloaded_at?: string | null
           id?: string
+          last_read_at?: string | null
           progress?: number | null
           started_at?: string | null
           status?: string | null
@@ -191,7 +261,9 @@ export type Database = {
           book_id?: string
           completed_at?: string | null
           current_page?: number | null
+          downloaded_at?: string | null
           id?: string
+          last_read_at?: string | null
           progress?: number | null
           started_at?: string | null
           status?: string | null
