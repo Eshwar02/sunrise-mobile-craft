@@ -25,3 +25,9 @@ verify_jwt = false
 
 [functions.translate-text]
 verify_jwt = false
+
+[functions.check-achievements]
+verify_jwt = false
+
+[functions.update-reading-streak]
+verify_jwt = false

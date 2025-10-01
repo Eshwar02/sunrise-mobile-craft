@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      achievements: {
+        Row: {
+          category: string
+          created_at: string
+          description: string
+          icon: string
+          id: string
+          name: string
+          requirement_type: string
+          requirement_value: number
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          description: string
+          icon: string
+          id?: string
+          name: string
+          requirement_type: string
+          requirement_value: number
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string
+          icon?: string
+          id?: string
+          name?: string
+          requirement_type?: string
+          requirement_value?: number
+        }
+        Relationships: []
+      }
       bookmarks: {
         Row: {
           book_id: string
@@ -100,6 +133,33 @@ export type Database = {
         }
         Relationships: []
       }
+      inspirational_quotes: {
+        Row: {
+          author: string
+          category: string | null
+          created_at: string
+          id: string
+          is_active: boolean | null
+          quote: string
+        }
+        Insert: {
+          author: string
+          category?: string | null
+          created_at?: string
+          id?: string
+          is_active?: boolean | null
+          quote: string
+        }
+        Update: {
+          author?: string
+          category?: string | null
+          created_at?: string
+          id?: string
+          is_active?: boolean | null
+          quote?: string
+        }
+        Relationships: []
+      }
       offline_content: {
         Row: {
           book_id: string
@@ -137,9 +197,12 @@ export type Database = {
         Row: {
           avatar_url: string | null
           created_at: string
+          current_streak: number | null
           display_name: string | null
           id: string
           language_preference: string | null
+          last_read_date: string | null
+          longest_streak: number | null
           reading_preferences: Json | null
           updated_at: string
           user_id: string
@@ -147,9 +210,12 @@ export type Database = {
         Insert: {
           avatar_url?: string | null
           created_at?: string
+          current_streak?: number | null
           display_name?: string | null
           id?: string
           language_preference?: string | null
+          last_read_date?: string | null
+          longest_streak?: number | null
           reading_preferences?: Json | null
           updated_at?: string
           user_id: string
@@ -157,9 +223,12 @@ export type Database = {
         Update: {
           avatar_url?: string | null
           created_at?: string
+          current_streak?: number | null
           display_name?: string | null
           id?: string
           language_preference?: string | null
+          last_read_date?: string | null
+          longest_streak?: number | null
           reading_preferences?: Json | null
           updated_at?: string
           user_id?: string
@@ -228,6 +297,38 @@ export type Database = {
           user_id?: string
         }
         Relationships: []
+      }
+      user_achievements: {
+        Row: {
+          achievement_id: string
+          created_at: string
+          earned_at: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          achievement_id: string
+          created_at?: string
+          earned_at?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          achievement_id?: string
+          created_at?: string
+          earned_at?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_achievements_achievement_id_fkey"
+            columns: ["achievement_id"]
+            isOneToOne: false
+            referencedRelation: "achievements"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       user_library: {
         Row: {
