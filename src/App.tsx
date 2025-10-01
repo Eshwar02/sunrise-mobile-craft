@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Library from "./pages/Library";
 import BookDetails from "./pages/BookDetails";
 import Reader from "./pages/Reader";
+import Chat from "./pages/Chat";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/library" element={<Library />} />
           <Route path="/book/:id" element={<BookDetails />} />
           <Route path="/read/:id" element={<Reader />} />
+          <Route path="/chat" element={<Chat />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

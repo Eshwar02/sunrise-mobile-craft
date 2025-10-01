@@ -287,7 +287,7 @@ const Home = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-card/80 backdrop-blur-sm hover:shadow-lg transition-all hover:scale-105 cursor-pointer group">
+          <Card className="bg-card/80 backdrop-blur-sm hover:shadow-lg transition-all hover:scale-105 cursor-pointer group" onClick={() => navigate('/chat')}>
             <CardContent className="p-6 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-3 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                 <MessageCircle className="h-6 w-6" />

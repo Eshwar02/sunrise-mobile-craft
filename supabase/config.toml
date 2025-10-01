@@ -16,3 +16,12 @@ verify_jwt = false
 
 [functions.manage-offline-reading]
 verify_jwt = false
+
+[functions.ai-chat-assistant]
+verify_jwt = false
+
+[functions.get-personalized-recommendations]
+verify_jwt = false
+
+[functions.translate-text]
+verify_jwt = false
